@@ -8,17 +8,21 @@ export const Doctors = () => {
     const [filterDoc,setfilterDoc]=useState([])
     const {doctors}=useContext(AppContext)
     const navigate=useNavigate()
+    
     const applyFilter=()=>{
+        // specilites are avilable
         if(specilities){
             console.log("hi")
-            setfilterDoc(doctors.filter(doc=>doc.specilities===specilities))
+            setfilterDoc(doctors.filter(doc=>doc.speciality===specilities))
         }else{
             setfilterDoc(doctors)
         }
     }
+
     useEffect(()=>{
         applyFilter()
     },[doctors,specilities])
+
     return (
         <div>
             <p className='text-gray-700'>Browse through the doctors specialist.</p>

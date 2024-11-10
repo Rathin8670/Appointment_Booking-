@@ -8,7 +8,7 @@ export default function TopDoctors() {
     return (
     <div className='flex flex-col gap-4 items-center my-16 md:mx-10 text-gray-900'>
         <h1 className='font-semibold text-black text-3xl'>Top Doctors to Book</h1>
-        <p className='text-sm text-gray-800'>Simply browse through our extensive list of trusted <br/>doctors.</p>
+        <p className='text-sm text-gray-800'>Simply browse through our extensive list of trusted doctors.</p>
         <div className='w-full grid grid-cols-auto gap-5 pt-5 gap-y-7 sm:px-0'>
             {doctors.slice(0,8).map((item,index)=>(
                 <div onClick={()=>navigate(`/appointment/${item._id}`)} className='border border-blue-300 rounded-xl cursor-pointer overflow-hidden transition ease-in-out delay-150 hover:-translate-x hover:scale-110 
